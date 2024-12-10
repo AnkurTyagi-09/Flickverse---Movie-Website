@@ -1,0 +1,353 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+body.sidebar-open .main-content {
+    margin-left: 200px;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4caf50;
+    margin-left: 50px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #4caf50;
+}
+
+.search input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Add space to avoid overlap with toggle button */
+}
+
+.sidebar.expanded {
+    left: 0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add space between icon and text */
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.sidebar-menu a i {
+    font-size: 18px; /* Adjust icon size */
+}
+
+.sidebar-menu a:hover {
+    background: #4caf50;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background: #4caf50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    z-index: 1100; /* Ensure it is above other elements */
+    transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #36a300;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+body.sidebar-open .main-content {
+    margin-left: 200px;
+}
+   
+/* Background Video Styling */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1; /* Pushes the video behind the content */
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Ensures text is visible over the video */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Featured and Popular Movies Section */
+.featured, .popular {
+    padding: 20px 30px;
+}
+
+.featured h2, .popular h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Common Movie Styles */
+.movie-carousel, .movie-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-item, .movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-item img, .movie-card img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.movie-item:hover, .movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-item h3, .movie-card h3 {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Slider Wrapper */
+.movie-slider {
+    overflow-x: scroll; /* Enables horizontal scrolling */
+    display: flex;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Movie Slide Container */
+.movie-slide {
+    display: flex;
+    gap: 20px; /* Adds space between items */
+}
+
+/* Individual Movie Item */
+.movie-item {
+    min-width: 200px;
+    text-align: center;
+    background: #222;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.movie-item h3 {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Navigation Buttons */
+.slider-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.prev-slide, .next-slide {
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background: #36a300;
+}
+
+/* call to action */
+.cta{
+    margin: 80px 0;
+    background-image: linear-gradient(to right, #3f2321, transparent),url(https://www.dexerto.com/cdn-image/wp-content/uploads/2023/08/02/crunchyroll-avod-catalog.jpg?width=1200&quality=60&format=auto);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: #fff;
+}
+
+.cta h3{
+    font-size: 4vw;
+    line-height: 5.3vw;
+    font-weight: 500;
+    color: #fff;
+}
+
+.cta p{
+    font-size: 18px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.cta-btn{
+    background: #ff5361;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Footer Section */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    font-size: 14px;
+    color: #aaa;
+}                                                      
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80%;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .movie-item img {
+        width: 100%;
+    }
+}
