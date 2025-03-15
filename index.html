@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickVerse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Toggle Button -->
+    <button class="toggle-btn" id="toggle-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar-menu">
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+            <a href="#"><i class="fas fa-film"></i> Movies</a>
+            <a href="#"><i class="fas fa-tv"></i> TV Shows</a>
+            <a href="#"><i class="fas fa-fire"></i> Trending</a>
+            <a href="#"><i class="fas fa-list"></i> My List</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header class="header" role="banner">
+            <div class="logo">FlickVerse</div>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">My List</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search for a movie..." aria-label="Search for movies" id="searchBar">
+                <ul class="suggestions" id="searchSuggestions"></ul>
+            </div>
+
+            <!-- Language Selector -->
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="hn">Hindi</option>
+            </select>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <video autoplay muted loop id="background-video">
+                <source src="/Images/3945446-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content">
+                <h1>Experience the Best Movies</h1>
+                <p>Watch your favorite movies and TV shows in one place.</p>
+                <button class="btn">Explore Now</button>
+            </div>
+        </section>
+
+         <!-- Featured Movies Section -->
+         <section class="featured">
+            <h2>Featured Movies</h2>
+            <div class="slider-navigation">
+                <button class="prev-slide">&lt;</button>
+                <div class="movie-slider">
+                    <div class="movie-slide">
+                        <div class="movie-item" data-movie="Movie Title 1">
+                            <img src="/Images/FRIOSA_VERT_First_Poster_2764x4096_DOM.webp" alt="Movie 1">
+                            <h3>Furiosa : A Mad Max Saga</h3>
+                        </div>
+                        <div class="movie-item" data-movie="Movie Title 2">
+                            <img src="/Images/Joker-poster.webp" alt="Movie 2">
+                            <h3>Joker: Folie à Deux</h3>
+                        </div>
+                        <div class="movie-item" data-movie="Movie Title 3">
+                            <img src="/Images/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg" alt="Movie 3">
+                            <h3>Inception</h3>
+                        </div>
+                        <div class="movie-item" data-movie="Movie Title 4">
+                            <img src="/Images/deccanherald_2024-01_a91ad7c6-feb3-4ee9-b76f-2d6e32d603a9_Thangalaan.webp" alt="Movie 4">
+                            <h3>Thangalaan</h3>
+                        </div>
+                        <div class="movie-item" data-movie="Movie Title 5">
+                            <img src="https://www.washingtonpost.com/graphics/2019/entertainment/oscar-nominees-movie-poster-design/img/750/BlackPanther59f24429d2605.jpg" alt="Movie 5">
+                            <h3>Black Panther</h3>
+                        </div>
+                        <div class="movie-item" data-movie="Movie Title 6">
+                            <img src="/Images/5movieposter1_ws.jpg" alt="Movie 6">
+                            <h3>Devara</h3>
+                        </div>
+                        <div class="movie-item" data-movie="Movie Title 7">
+                            <img src="https://i.pinimg.com/736x/0d/60/a4/0d60a4fd4bcd9d2a3d9e9cc9602e4189.jpg" alt="Movie 7">
+                            <h3>Crew</h3>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-slide">&gt;</button>
+            </div>
+        </section>       
+
+        <!-- Popular Movies Section -->
+        <section class="popular">
+            <h2>Popular Movies</h2> 
+            <div class="slider-navigation">
+                <button class="prev-slide">&lt;</button>
+                <div class="movie-slider">
+                    <div class="movie-slide">
+                <div class="movie-item" data-movie="Popular Movie 1">
+                    <img src="/Images/sYhfcRhMS3D26huEJWh3Un-320-80.png" alt="Popular Movie 1">
+                    <h3>Trap</h3>
+                </div>
+                <div class="movie-item" data-movie="Popular Movie 2">
+                    <img src="/Images/s-l400.jpg" alt="Popular Movie 2">
+                    <h3>Spider-Man: Across the Spider-Verse</h3>
+                </div>
+                <div class="movie-item" data-movie="Popular Movie 3">
+                    <img src="/Images/joker-2019-movie-joker-joaquin-phoenix-actor-men-hd-wallpaper-preview.jpg" alt="Popular Movie 3">
+                    <h3>Joker</h3>
+                </div>
+                <div class="movie-item" data-movie="Popular Movie 4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/90/Animal_%282023_film%29_poster.jpg" alt="Popular Movie 4">
+                    <h3>Animal</h3>
+                </div>
+                <div class="movie-item" data-movie="Popular Movie 5">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS_3xOBSdYhmyjoqzu48UgRaxO7DYZT-BDUw&s" alt="Popular Movie 5">
+                    <h3>Kill</h3>
+                </div>
+                <div class="movie-item" data-movie="Popular Movie 6">
+                    <img src="https://images.deccanherald.com/deccanherald%2F2023-12%2Ff735343e-8a45-4117-b35a-1b73ef550f83%2FPushpa_2.jpg?format=webp&q=70&w=400&dpr=2" alt="Popular Movie 6">
+                    <h3>Pushpa 2: The Rule</h3>
+                </div>
+                <div class="movie-item" data-movie="Popular Movie 7">
+                    <img src="https://i.pinimg.com/236x/64/15/cb/6415cb69f4651186cd0d6e55037da48f.jpg" alt="Popular Movie 7">
+                    <h3>Kalki 2898 AD</h3>
+                </div>
+                </div>
+            </div>
+        <button class="next-slide">&gt;</button>
+        </div>
+        </section>
+
+    <div class="cta">
+    <h3>Your adventure starts here. Are you ready?</h3>
+    <p> Stream now and join the anime fandom today!</p>
+    <a href="#" class="cta-btn">Know More</a>
+    </div>
+
+    <!-- Tv series Section -->
+    <section class="popular">
+        <h2>Tv Series</h2> 
+        <div class="slider-navigation">
+            <button class="prev-slide">&lt;</button>
+            <div class="movie-slider">
+                <div class="movie-slide">
+            <div class="movie-item" data-movie="Series 1">
+                <img src="https://m.media-amazon.com/images/I/61g+uzL0ohL._AC_UF1000,1000_QL80_.jpg" alt="Series 1">
+                <h3>Wednesday</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 2">
+                <img src="https://www.tallengestore.com/cdn/shop/products/91TmR1v-qRL._RI_6381f3ff-2abf-4575-9379-2256bcacf06c.jpg?v=1570155292" alt="Series 2">
+                <h3>The Office</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 3">
+                <img src="https://static.displate.com/270x380/displate/2022-12-28/4d7cbeb3f45619fa270d6e43dbfcd81b_0c76069b068a07ce41517a083289b58e.jpg" alt="Series 3">
+                <h3>Breaking Bad</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 4">
+                <img src="https://www.tallengestore.com/cdn/shop/products/HauntingOfHillHouse-NetflixHorrorTVShowPoster_4fc47c61-546d-4505-90a4-2c10def767ea.jpg?v=1625220897" alt="Series 4">
+                <h3>Haunting Of Hill House</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 5">
+                <img src="https://m.media-amazon.com/images/M/MV5BYzNkNGFhN2ItZDEwNS00MTEzLThlZWEtMjIwODdlYjRjMmYxXkEyXkFqcGc@._V1_QL75_UX820_.jpg" alt="Series 5">
+                <h3>Aspirants</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 6">
+                <img src="https://uniathenaprods3.uniathena.com/s3fs-public/insights-article/seriesreview-e2-80-9cfriends-e2-80-9d_0.jpg" alt="Series 6">
+                <h3>Friends</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 7">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfCF5jjvCjrk7-fKx4idUxQGSy1pOYYBcDkQ&s" alt="Series 7">
+                <h3>The Bear</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 8">
+                <img src="https://m.media-amazon.com/images/M/MV5BNjA1YmJiNTMtMDc4OC00ZjlkLTgyMjctYzRmMWJhMmZhMjkyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Series 8">
+                <h3>Vincenzo</h3>
+            </div>
+        </div>
+        </div>
+    <button class="next-slide">&gt;</button>
+    </div>
+    </section>
+
+    <!-- Anime Section -->
+    <section class="popular">
+        <h2>Anime</h2> 
+        <div class="slider-navigation">
+            <button class="prev-slide">&lt;</button>
+            <div class="movie-slider">
+                <div class="movie-slide">
+            <div class="movie-item" data-movie="Series 1">
+                <img src="https://images-cdn.ubuy.co.in/6354bf694911427cfd636814-poster-wall-art-frameable-animeanime.jpg" alt="Series 1">
+                <h3>Demon Slayer</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 2">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQPNfsQ8VISTz7nSm8OqTZZn3EWHpLVonJnFTGnNorXAWqNHpSu" alt="Series 2">
+                <h3>One Piece</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 3">
+                <img src="https://m.media-amazon.com/images/M/MV5BNWFlNmJkN2YtNGRiZS00NjExLTlmNmEtYzdiMTdiZmMzYzAwXkEyXkFqcGc@._V1_.jpg" alt="Series 3">
+                <h3>Blue Lock</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 4">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzgxMzI3NzgtYzE2Zi00MzlmLThlNWEtNWVmZWEyZjNkZWYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Series 4">
+                <h3>My Hero Academia</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAYDS9xHDA5241DSczAZvzqODvY0DhYMMVJQ&s" alt="Series 5">
+                <h3>Hunter x Hunter</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 6">
+                <img src="https://m.media-amazon.com/images/M/MV5BMmE4NGI0NWUtOGFmNS00Yzk4LWFjYWYtYjU2MTAxYTMxMGQ5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Series 6">
+                <h3>Dan Da Dan</h3>
+            </div>
+        </div>
+        </div>
+    <button class="next-slide">&gt;</button>
+    </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="popular">
+        <h2>Trending</h2> 
+        <div class="slider-navigation">
+            <button class="prev-slide">&lt;</button>
+            <div class="movie-slider">
+                <div class="movie-slide">
+            <div class="movie-item" data-movie="Series 1">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTylq8tdTt3chB16TZs0hsB2wp_5VdoT0iRGQilBaIJdrogq4M-" alt="Series 1">
+                <h3>Smile 2</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 2">
+                <img src="https://static.displate.com/270x380/displate/2024-07-27/0fc4fe98c84c1f683307f80c15954d84_2cc73daea450d65937d4bac19b980fd0.jpg" alt="Series 2">
+                <h3>The Boys</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 3">
+                <img src="https://i5.walmartimages.com/seo/Fallout-TV-Series-poster-posters-for-bedroom-Wall-Decor-Matte-poster-Frameless-Gift-12x18Inch-30x46cm_84a24a18-1cb0-4a4f-8215-1145be6410af.769f5e3212c8c7f94e70fe18f5a675b3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Series 3">
+                <h3>Fallout</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 4">
+                <img src="https://m.media-amazon.com/images/M/MV5BNmFiM2FkYTYtY2FiOS00ZWJkLTkyOTgtNmFmODI4NjcwNDgzXkEyXkFqcGc@._V1_QL75_UY281_CR1,0,190,281_.jpg" alt="Series 4">
+                <h3>Dragon Ball Z </h3>
+            </div>
+            <div class="movie-item" data-movie="Series 5">
+                <img src="https://i.ebayimg.com/images/g/6bIAAOSwz91i1CbI/s-l400.jpg" alt="Series 5">
+                <h3>PEAKY BLINDERS</h3>
+            </div>
+            <div class="movie-item" data-movie="Series 5">
+                <img src="https://m.media-amazon.com/images/M/MV5BZDY4ZmZhNzMtNjdkMC00NTE3LWFjYzQtOGE4OTllOGY1NTk5XkEyXkFqcGc@._V1_.jpg" alt="Series 5">
+                <h3>All of Us Are Dead </h3>
+            </div>
+        </div>
+        </div>
+    <button class="next-slide">&gt;</button>
+    </div>
+    </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 FlickVerse. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
